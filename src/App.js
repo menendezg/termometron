@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Card from "./components/Card";
+import Input from "./components/Input";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div className="container py-4">
         <Header name="TermoMetron" />
         <Card />
+        <Input />
       </div>
     </div>
   );
