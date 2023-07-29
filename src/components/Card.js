@@ -20,7 +20,7 @@ const Card = () => {
   let image = null;
   const messageHandler = (weatherData) => {
     switch (true) {
-      case weatherData > 18:
+      case weatherData > 15:
         setMessage(
           `${weatherData} Grados. No hace tanto frio. remerita vas andar bien capo.`
         );
