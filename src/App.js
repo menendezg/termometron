@@ -8,7 +8,11 @@ function App() {
     <div className="App">
       <div className="container py-4">
         <Header name="TermoMetron" />
-        {/* <Card /> */}
+        <p>Hola!! <br /> bienvenido o bienvenida a TermoMetron. La app que te tira la temperatura con onda. 
+          Hace click en una de las city del amba y listo. 
+          <br />
+          hacele caso! no seas zapallo
+        </p>
         <Input />
       </div>
     </div>
