@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container py-4">
         <Header name="TermoMetron" />
-        <Card />
+        {/* <Card /> */}
         <Input />
       </div>
     </div>

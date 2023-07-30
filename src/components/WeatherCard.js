@@ -15,7 +15,7 @@ const Weathercard = (props) => {
 
   const messageHandler = (temperature) => {
     switch (true) {
-      case temperature > 18:
+      case temperature > 15:
         setMessage(
           `${temperature} Grados. No hace tanto frío. Remerita, vas a andar bien, capo.`
         );
