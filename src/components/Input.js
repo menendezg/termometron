@@ -11,7 +11,6 @@ const Input = () => {
 
   const handleButton = (event) => {
     const location = event.target.value;
-    
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location} ${neighbourhood} ${country}`;
     console.log(apiUrl);
 
@@ -54,7 +53,7 @@ const Input = () => {
           type="button"
           className="btn btn-outline-primary btn-lg"
           onClick={handleButton}
-          value="moron"
+          value="Moron"
         >
           Moron
         </button>

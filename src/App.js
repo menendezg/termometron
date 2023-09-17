@@ -1,7 +1,10 @@
 import Header from "./components/Header";
 import Card from "./components/Card";
-import Input from "./components/Input";
 import "./App.css";
+import { Routes, Route } from "react-router-dom"
+import Spain from "./Pages/Spain";
+import Argentina from "./Pages/Argentina";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -13,7 +16,14 @@ function App() {
           <br />
           hacele caso! no seas zapallo
         </p>
-        <Input />
+        <Link to="spain">Spain</Link>
+        <br></br>
+        <Link to="Argentina">Argentina</Link>
+        <Routes>
+          <Route path="spain" element={ <Spain/>} />
+          <Route path="Argentina" element={ <Argentina/>} />
+        </Routes>
+        {/* <Input /> */}
       </div>
     </div>
   );
