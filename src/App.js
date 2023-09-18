@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import Card from "./components/Card";
 import "./App.css";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate} from "react-router-dom"
 import Spain from "./Pages/Spain";
 import Argentina from "./Pages/Argentina";
+import SpainOnePage from "./Pages/SpainOnePage";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -19,9 +20,13 @@ function App() {
         <Link to="spain">Spain</Link>
         <br></br>
         <Link to="Argentina">Argentina</Link>
+        <br></br>
+        <Link to="allSpain">Spain in one shot</Link>
         <Routes>
+          <Route path="/" element={<Navigate to="/Argentina"/>} />
           <Route path="spain" element={ <Spain/>} />
           <Route path="Argentina" element={ <Argentina/>} />
+          <Route path="allSpain" element={ <SpainOnePage/>} />
         </Routes>
         {/* <Input /> */}
       </div>
