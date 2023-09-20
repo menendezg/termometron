@@ -3,6 +3,7 @@ import WeatherSpan from "../components/WeatherSpan";
 
 const SpainOnePage = (props) => {
   const [weatherData, setWeatherData] = useState([]);
+  const [spainTime, setSpainTime] = useState({})
   const Toledo =
     "https://api.weatherapi.com/v1/current.json?key=8da8abb59d604218b0a15508232807&q=Toledo, castilla la mancha, spain";
   const Jaen =
@@ -32,6 +33,7 @@ const SpainOnePage = (props) => {
     {city: "Barcelona", url:Barcelona},
     {city: "Madrid", url:Madrid},
   ];
+  const timeUrl = "http://worldtimeapi.org/api/timezone/Europe/madrid"
 
   useEffect(() => {
     const getAllWeather = async () => {
@@ -44,7 +46,15 @@ const SpainOnePage = (props) => {
         }]);
       });
     };
+    const getSpainTime  = async () =>{
+      const time = await fetch(timeUrl).then((response)=>response.json());
+      const [hours, minutes] = time.datetime.split("T")[1].split(".")[0].split(":")
+
+      setSpainTime({"time": hours+":"+minutes})
+    }
+
     getAllWeather();
+    getSpainTime();
     return () => {
       //
     };
@@ -53,7 +63,7 @@ const SpainOnePage = (props) => {
   const location = null;
   return (
     <div>
-        {weatherData && <WeatherSpan data={weatherData}></WeatherSpan>}
+        {weatherData && <WeatherSpan data={weatherData} dateTime={spainTime}></WeatherSpan>}
     </div>
   )
 };
