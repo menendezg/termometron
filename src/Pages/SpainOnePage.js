@@ -33,7 +33,7 @@ const SpainOnePage = (props) => {
     {city: "Barcelona", url:Barcelona},
     {city: "Madrid", url:Madrid},
   ];
-  const timeUrl = "http://worldtimeapi.org/api/timezone/Europe/madrid"
+  const timeUrl = "https://worldtimeapi.org/api/timezone/Europe/madrid"
 
   useEffect(() => {
     const getAllWeather = async () => {
